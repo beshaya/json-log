@@ -7,6 +7,8 @@ Does bracket and quote matching to handle nested objects
 
 import json
 
+diagnostic = False
+
 # Read the entirety of a file as dictionaries
 def read(filename):
     file = open(filename)
@@ -35,8 +37,9 @@ def readItem(file):
 
     if not objectBuilder.isComplete():
         return None
+    if diagnostic:
+        print objectBuilder.getObject()
     # Parse JSON Object
-    print objectBuilder.getObject()
     return json.loads(objectBuilder.getObject())
 
 # Helper class to keep track of characters that effect where the object ends
