@@ -1,0 +1,4 @@
+{"string": "foobar"}{"int": 1}, {"array": [1,2,3]}
+{"object": {"go": "deeper"}}
+
+{"nasty": {"escape": "not a bracket \"}"}}
