@@ -14,6 +14,7 @@ def read(filename):
     while contents[-1] != None:
         contents.append(readItem(file))
     contents.pop()
+    file.close()
     return contents
 
 # Read the next json item from the file
